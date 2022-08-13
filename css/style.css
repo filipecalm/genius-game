@@ -69,7 +69,7 @@ html {
 
 }
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	background-image: url('./wallpaper.png');
 	font-family: "Bungee", Verdana, sans-serif;
 }
 
@@ -109,6 +109,12 @@ body {
 	font-size: 1.8rem;
 	margin-left: -1rem;
 	vertical-align: top;
+}
+
+.copy {
+	font-family: verdana, sans-serif;
+	vertical-align: top;
+	margin-right: 1.5px;
 }
 
 
@@ -199,8 +205,7 @@ body {
 .group-large {
 	display: flex;
 	width: 10rem;
-	margin-left: 4.5rem;
-
+	margin-left: 4.5rem
 }
 
 .gui__label {
@@ -323,6 +328,12 @@ footer {
   width: 2rem;
   height: 2rem;
   border-radius: 15px
+}
+
+.items-center {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	letter-spacing: 2px;
 }
 
 @media (max-width: 700px) {
