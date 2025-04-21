@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**********************************/
@@ -37,40 +37,39 @@
 /**********************************/
 
 :root {
-	--clr-normal-green:   #00A74A;
-	--clr-normal-red:     #9F0F17;
-	--clr-normal-yellow:  #CCA707;
-	--clr-normal-blue:    #094A8F;
-	
-	--clr-light-green:    #13ff7c;
-	--clr-light-red:      #ff4c4c;
-	--clr-light-yellow:   #fed93f;
-	--clr-light-blue:     #1c8cff;
-	
-	--clr-border:		  #333333;
-	--clr-center:  		  #ECE7EE;
+  --clr-normal-green: #00a74a;
+  --clr-normal-red: #9f0f17;
+  --clr-normal-yellow: #cca707;
+  --clr-normal-blue: #094a8f;
 
-	--clr-counter-bg:	  #32050C;
-	--clr-counter-off:	  #430710;
-	--clr-counter-on:	  #DC0D29;
-	
-	--clr-switch: 	      #3193DE;
+  --clr-light-green: #13ff7c;
+  --clr-light-red: #ff4c4c;
+  --clr-light-yellow: #fed93f;
+  --clr-light-blue: #1c8cff;
 
-	--game-size: 48rem;
-	--game-border: 1.5rem solid var(--clr-border);
+  --clr-border: #333333;
+  --clr-center: #ece7ee;
+
+  --clr-counter-bg: #32050c;
+  --clr-counter-off: #430710;
+  --clr-counter-on: #dc0d29;
+
+  --clr-switch: #3193de;
+
+  --game-size: 48rem;
+  --game-border: 1.5rem solid var(--clr-border);
 }
 
 /**********************************/
 /* 1. Tags
 /**********************************/
 
-html { 
-	font-size: 62.5%;
-
+html {
+  font-size: 62.5%;
 }
 body {
-	background-image: url('./wallpaper.png');
-	font-family: "Bungee", Verdana, sans-serif;
+  background-image: url("./wallpaper.png");
+  font-family: "Bungee", Verdana, sans-serif;
 }
 
 /**********************************/
@@ -78,9 +77,9 @@ body {
 /**********************************/
 
 .container {
-	width: var(--game-size);
-	margin-left: auto;
-	margin-right: auto;
+  width: var(--game-size);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**********************************/
@@ -88,85 +87,95 @@ body {
 /**********************************/
 
 .game {
-	width: var(--game-size);
-	height: var(--game-size);
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 2rem;
-	position: relative;
+  width: var(--game-size);
+  height: var(--game-size);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .game__title {
-	font-size: 4rem;
-	text-transform: uppercase;
-	margin: 0;
-	padding-left: 1.2rem;
-	padding-top: 4.7rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 1.2rem;
+  padding-top: 4.7rem;
+  background: linear-gradient(45deg, #00a74a, #094a8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reg {
-	font-family: verdana, sans-serif;
-	font-size: 1.8rem;
-	margin-left: -1rem;
-	vertical-align: top;
+  font-family: verdana, sans-serif;
+  font-size: 1.8rem;
+  margin-left: -1rem;
+  vertical-align: top;
 }
 
 .copy {
-	font-family: verdana, sans-serif;
-	vertical-align: top;
-	margin-right: 1.5px;
+  font-family: verdana, sans-serif;
+  vertical-align: top;
+  margin-right: 1.5px;
 }
-
 
 /**********************************/
 /* 3.1 Pads
 /**********************************/
 
 .game__pad {
-	width: calc(var(--game-size) / 2);
-	height: calc(var(--game-size) / 2);
-	border: var(--game-border);
-	
+  width: calc(var(--game-size) / 2);
+  height: calc(var(--game-size) / 2);
+  border: var(--game-border);
+  transition: all 0.3s ease;
+}
+
+.game__pad:hover {
+  filter: brightness(1.1);
 }
 
 .game__pad-tl {
-	background-color: var(--clr-normal-green);
-	border-top-left-radius: 100%;
+  background-color: var(--clr-normal-green);
+  border-top-left-radius: 100%;
 }
 
 .game__pad-tr {
-	background-color: var(--clr-normal-red);
-	border-top-right-radius: 100%;
+  background-color: var(--clr-normal-red);
+  border-top-right-radius: 100%;
 }
 
 .game__pad-bl {
-	background-color: var(--clr-normal-yellow);
-	border-bottom-left-radius: 100%;
+  background-color: var(--clr-normal-yellow);
+  border-bottom-left-radius: 100%;
 }
 
 .game__pad-br {
-	background-color: var(--clr-normal-blue);
-	border-bottom-right-radius: 100%;
+  background-color: var(--clr-normal-blue);
+  border-bottom-right-radius: 100%;
 }
 
 .game__pad-tl.game__pad-active {
-	background-color: var(--clr-light-green);
+  background-color: var(--clr-light-green);
 }
 
 .game__pad-tr.game__pad-active {
-	background-color: var(--clr-light-red);
+  background-color: var(--clr-light-red);
 }
 
 .game__pad-bl.game__pad-active {
-	background-color: var(--clr-light-yellow);
+  background-color: var(--clr-light-yellow);
 }
 
 .game__pad-br.game__pad-active {
-	background-color: var(--clr-light-blue);
+  background-color: var(--clr-light-blue);
 }
 
 .game__pad-btn {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /**********************************/
@@ -174,17 +183,19 @@ body {
 /**********************************/
 
 .game__options {
-	position: absolute;
-	background-color: var(--clr-center);
+  position: absolute;
+  background-color: var(--clr-center);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 
-	width: calc(var(--game-size) / 2);
-	height: calc(var(--game-size) / 2);
+  width: calc(var(--game-size) / 2);
+  height: calc(var(--game-size) / 2);
 
-	top: calc(var(--game-size) / 4);
-	left: calc(var(--game-size) / 4);
+  top: calc(var(--game-size) / 4);
+  left: calc(var(--game-size) / 4);
 
-	border: var(--game-border);
-	border-radius: 25rem;
+  border: var(--game-border);
+  border-radius: 25rem;
 }
 
 /**********************************/
@@ -192,152 +203,225 @@ body {
 /**********************************/
 
 .gui {
-	padding-left: 1.5rem;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-end;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .group {
-	margin-right: 2.2rem;
+  margin-right: 2.2rem;
 }
 
 .group-large {
-	display: flex;
-	width: 10rem;
-	margin-left: 4.5rem
+  display: flex;
+  width: 10rem;
+  margin-left: 4.5rem;
 }
 
 .gui__label {
-	font-family: "Arima Madurai", cursive;
-	font-weight: bold;
-	font-size: 0.75rem;
-	text-align: center;
-	text-transform: uppercase;
+  font-family: "Arima Madurai", cursive;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .gui__label-switch {
-	margin: 0;
-	padding-top: .75rem;
+  margin: 0;
+  padding-top: 0.75rem;
 }
 
 .gui__btn {
-	width: 2.5rem;
-	height: 2.5rem;
-	margin-left: .2rem;
-	border-radius: 5rem;
-	box-shadow: 0 .2rem .3rem #222;
-	border: .4rem solid #444;
-	cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.2rem;
+  border-radius: 5rem;
+  box-shadow: 0 0.2rem 0.3rem #222;
+  border: 0.4rem solid #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .gui__btn:active {
-	transform: translate(0, .3rem);
-	box-shadow: none;
+  transform: translate(0, 0.3rem);
+  box-shadow: none;
+}
+
+.gui__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gui__btn-start {
-	background-color: red;
+  background-color: red;
 }
 
 .gui__btn-strict {
-	background-color: yellow;
+  background-color: yellow;
 }
 
 .gui__btn-switch {
-	background-color: #222;
-	margin-left: .5rem;
-	margin-right: .5rem;
-	width: 5rem;
-	height: 2.3rem;
-	border-radius: .3rem;
-	cursor: pointer;
+  background-color: #222;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 5rem;
+  height: 2.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 
 .gui__btn-switch::before {
-	content: "";
-	background-color: var(--clr-switch);
-	display: block;
-	position: relative;
-	left: 2.5rem;
-	width: 2.2rem;
-	height: 1.9rem;
-	border-radius: .3rem;
-	border: .2rem solid #333;
+  content: "";
+  background-color: var(--clr-switch);
+  display: block;
+  position: relative;
+  left: 2.5rem;
+  width: 2.2rem;
+  height: 1.9rem;
+  border-radius: 0.3rem;
+  border: 0.2rem solid #333;
 }
 
 .gui__btn-switch-on::before {
-	left: 0;
+  left: 0;
 }
 
 .gui__counter {
-	background-color: var(--clr-counter-bg);
-	color: var(--clr-counter-on);
-	font-family: "Iceland", cursive;
-	font-weight: bold;
-	font-size: 3rem;
-	text-align: right;
-	width: 5.5rem;
-	border: .3rem solid #000;
-	border-radius: 1rem;
-	padding-right: .2rem;
-	padding-right: .3rem;
+  background-color: var(--clr-counter-bg);
+  color: var(--clr-counter-on);
+  font-family: "Iceland", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: right;
+  width: 5.5rem;
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  padding-right: 0.2rem;
+  padding-right: 0.3rem;
 }
 
-.gui__counter-on{
-	color: var(--clr-counter-on);
+.gui__counter-on {
+  color: var(--clr-counter-on);
 }
 
 .gui__led {
-	background-color: #32050C;
-	margin-left: 1rem;
-	margin-bottom: .5rem;
-	width: .8rem;
-	height: .8rem;
-	border: .2rem solid #222;
-	border-radius: 2rem;
+  background-color: #32050c;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.2rem solid #222;
+  border-radius: 2rem;
 }
 
 .gui__led-active {
-	background-color: red;
+  background-color: red;
 }
 
 /**********************************/
 /* 4. Footer
 /**********************************/
 
-footer {
-	text-align: center;
-	margin-top: 5rem;
-	font-size: 1rem;	
-  padding: 2rem;
-  max-width: 96rem;
+.modern-footer {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  padding: 2rem 0;
+  margin-top: 3rem;
+  color: #fff;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
   margin: 0 auto;
-  flex-direction: column
+  text-align: center;
 }
 
 .footer-social {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  align-items: center
+  gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.img-social {
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-link ion-icon {
+  font-size: 2.4rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover ion-icon {
+  transform: scale(1.1);
+  color: var(--clr-light-blue);
+}
+
+.footer-text {
+  font-family: "Arima Madurai", cursive;
+  font-size: 1.4rem;
   margin: 0;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 15px
+  opacity: 0.9;
 }
 
-.items-center {
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	letter-spacing: 2px;
+.heart {
+  color: #ff4c4c;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.author {
+  color: var(--clr-light-blue);
+  font-weight: bold;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 700px) {
-	html {
-		font-size: 45%;
-	}
+  html {
+    font-size: 45%;
+  }
+
+  .footer-social {
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .social-link ion-icon {
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    font-size: 1.2rem;
+  }
 }
