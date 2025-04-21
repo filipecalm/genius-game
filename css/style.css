@@ -70,6 +70,10 @@ html {
 body {
   background-image: url("./wallpaper.png");
   font-family: "Bungee", Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 /**********************************/
@@ -80,6 +84,11 @@ body {
   width: var(--game-size);
   margin-left: auto;
   margin-right: auto;
+  flex: 1;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**********************************/
@@ -91,10 +100,9 @@ body {
   height: var(--game-size);
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
   position: relative;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
@@ -141,21 +149,29 @@ body {
 .game__pad-tl {
   background-color: var(--clr-normal-green);
   border-top-left-radius: 100%;
+  border-right: calc(var(--game-border) * 0.5);
+  border-bottom: calc(var(--game-border) * 0.5);
 }
 
 .game__pad-tr {
   background-color: var(--clr-normal-red);
   border-top-right-radius: 100%;
+  border-left: calc(var(--game-border) * 0.5);
+  border-bottom: calc(var(--game-border) * 0.5);
 }
 
 .game__pad-bl {
   background-color: var(--clr-normal-yellow);
   border-bottom-left-radius: 100%;
+  border-right: calc(var(--game-border) * 0.5);
+  border-top: calc(var(--game-border) * 0.5);
 }
 
 .game__pad-br {
   background-color: var(--clr-normal-blue);
   border-bottom-right-radius: 100%;
+  border-left: calc(var(--game-border) * 0.5);
+  border-top: calc(var(--game-border) * 0.5);
 }
 
 .game__pad-tl.game__pad-active {
@@ -326,9 +342,10 @@ body {
 .modern-footer {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
   padding: 2rem 0;
-  margin-top: 3rem;
   color: #fff;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: auto;
 }
 
 .footer-content {
