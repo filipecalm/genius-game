@@ -1,33 +1,34 @@
 const _data = {
-  gameOn: false,
-  timeout: undefined,
-  sounds: [],
+	gameOn: false,
+	timeout: undefined,
+	sounds: [],
 
-  strict: false,
-  playerCanPlay: false,
-  score: 0,
-  gameSequence: [],
-  playerSequence: []
+	strict: false,
+	playerCanPlay: false,
+	score: 0,
+	gameSequence: [],
+	playerSequence: []
 };
 
 const _gui = {
-  counter: document.querySelector(".gui__counter"),
-  switch: document.querySelector(".gui__btn-switch"),
-  led: document.querySelector(".gui__led"),
-  strict: document.querySelector(".gui__btn-strict"),
-  start: document.querySelector(".gui__btn-start"),
-  pads: document.querySelectorAll(".game__pad")
+	counter: document.querySelector(".gui__counter"),
+	switch: document.querySelector(".gui__btn-switch"),
+	led: document.querySelector(".gui__led"),
+	strict: document.querySelector(".gui__btn-strict"),
+	start: document.querySelector(".gui__btn-start"),
+	pads: document.querySelectorAll(".game__pad")
 }
 
 const _soundUrls = [
-  "sounds/sound1.mp3",
-  "sounds/sound2.mp3",
-  "sounds/sound3.mp3",
-  "sounds/sound4.mp3"
+	"sounds/sound1.mp3",
+	"sounds/sound2.mp3",
+	"sounds/sound3.mp3",
+	"sounds/sound4.mp3"
 ];
 
 _soundUrls.forEach(sndPath => {
 	const audio = new Audio(sndPath);
+	audio.volume = 1.0;
 	_data.sounds.push(audio);
 });
 
@@ -116,7 +117,7 @@ const newColor = () => {
 		blink("**", startGame);
 		return;
 	}
-	
+
 	_data.gameSequence.push(Math.floor(Math.random() * 4));
 	_data.score++;
 
