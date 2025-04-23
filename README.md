@@ -9,6 +9,13 @@ O Genius Game é um jogo retrô desafiador e divertido que convida você e seus 
 - Sequências de cores e sons geradas aleatoriamente para desafiar sua memória
 - Níveis de complexidade crescentes para testar sua concentração e agilidade mental
 
+### Divirta-se:
+<div style="display: inline_block">
+  <a href="https://genius-game.netlify.app" target="_blank" rel="noopener noreferrer">
+    <img align="center" alt="netlify" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" />
+  </a>
+</div>
+
 ## :checkered_flag: Como jogar?
 - Acompanhe a sequência de cores e sons que é gerada aleatoriamente
 - Repita a sequência corretamente para avançar para o próximo nível
