@@ -1,3 +1,12 @@
+document.documentElement.style.webkitTapHighlightColor = 'transparent';
+document.documentElement.style.webkitTouchCallout = 'none';
+document.documentElement.style.webkitUserSelect = 'none';
+
+document.querySelectorAll('audio, video').forEach(media => {
+	media.volume = 1.0;
+	media.muted = false;
+});
+
 const _data = {
 	gameOn: false,
 	timeout: undefined,
