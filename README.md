@@ -1,46 +1,45 @@
-# Genius Game :video_game:
+# Genius Game
 
-![genius game](https://github.com/filipecalm/genius-game/assets/103292859/18640c9f-ee85-46e1-ae06-e801241dcaa1)
+Clássico de memória em quatro cores — agora em TypeScript, com build Vite e visual atualizado.
 
-O Genius Game é um jogo retrô desafiador e divertido que convida você e seus amigos a exercitarem o cérebro e a memória. Inspirado na nostalgia dos jogos clássicos, este projeto foi desenvolvido utilizando as tecnologias HTML, CSS e JavaScript.
+## Como jogar
 
-## :rocket: Recursos
-- Interface nostálgica e elementos visuais envolventes
-- Sequências de cores e sons geradas aleatoriamente para desafiar sua memória
-- Níveis de complexidade crescentes para testar sua concentração e agilidade mental
+1. Ligue o aparelho (ON).
+2. Aperte **start** e observe a sequência.
+3. Repita as cores na mesma ordem.
+4. Ative **strict** se quiser reinício total a cada erro.
 
-### Divirta-se:
-<div style="display: inline_block">
-  <a href="https://genius-game.netlify.app" target="_blank" rel="noopener noreferrer">
-    <img align="center" alt="netlify" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" />
-  </a>
-</div>
+Live: [genius-game.netlify.app](https://genius-game.netlify.app)
 
-## :checkered_flag: Como jogar?
-- Acompanhe a sequência de cores e sons que é gerada aleatoriamente
-- Repita a sequência corretamente para avançar para o próximo nível
-- Com cada nível, a sequência se torna mais complexa
-- Tente chegar ao nível mais alto que puder!
+## Stack
 
-O Genius Game é uma ótima maneira de se divertir enquanto aprimora suas habilidades cognitivas. Aproveite o jogo e veja até onde sua memória pode chegar!
+- TypeScript
+- Vite
+- CSS moderno (sem wallpaper de madeira)
 
-## 🚀 Tecnologias utilizadas
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Desenvolvimento
 
-- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/HTML5)
-- [CSS3](https://developer.mozilla.org/pt-BR/docs/Archive/CSS3)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+```bash
+npm install
+npm run dev
+```
 
-## :clap: Como contribuir?
-- Faça um fork deste repositório
-- Crie a sua branch com a sua feature: `git checkout -b minha-feature`
-- Faça commit das suas modificações: `git commit -m 'feat: Minha nova feature'`
-- Faça push para a sua branch: `git push origin minha-feature`
+Opcional: copie `.env.example` para `.env` e defina `VITE_GA_MEASUREMENT_ID` para analytics (só carrega após consentimento).
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+```bash
+npm run build
+npm run preview
+```
 
----
+## Estrutura
 
-Feito com :heart: by Filipe Almeida!
+```
+src/
+  main.ts
+  consent.ts
+  game/          # engine tipado
+  styles/
+public/          # sons, favicons, robots, sitemap
+```
 
-Para qualquer dúvida ou feedback, sinta-se à vontade para [entrar em contato comigo](mailto:filipecalm@gmail.com)!
+Feito por Filipe Almeida — [contato](mailto:filipecalm@gmail.com)
