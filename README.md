@@ -9,7 +9,7 @@ Clássico de memória em quatro cores — agora em TypeScript, com build Vite e 
 3. Repita as cores na mesma ordem.
 4. Ative **strict** se quiser reinício total a cada erro.
 
-Live: [genius-game.netlify.app](https://genius-game.netlify.app)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://genius-game.netlify.app)
 
 ## Stack
 
